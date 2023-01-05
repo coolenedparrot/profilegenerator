@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-teal-400 font-mono py-6">
+
+  <div id="userProf" class="card text-center">
+    <h1 id="profileName1" class="text-2xl pt-2">Name</h1>
+    <h1 id="profileName" class="text-2xl pb-2">lastName</h1>
+    <img id="image" src="" class="mx-auto" />
+    <p id="profileAge" class="py-2 text-2xl"> </p>
+    <p class="pb-6 pt-0">
+      <button class="border border-blue-800 text-blue-800 pl-1 pr-1" id="" onclick="switchScreen()">New Profile</button>
+      <button class="border border-blue-800 text-blue-800 pl-1 pr-1" id="" onclick="subInput(),getImg(),getName1(),getName()">Generate</button>
+      <button class="border border-blue-800 text-blue-800 pl-1 pr-1" id="" onclick="storageOutput(),getImg(),getName1(),getName()">Generate saved</button>
+    </p>
+  </div>
+  <!-- User profile- first name, last name, image generated, age. 
+    Buttons for making new profile, generating again, and generating based on saved data  -->
+
+  <div id="userSub" class="card flex flex-col items-center">
+    <p class="profilegenerator text-blue-800 text-5xl text-center">Profile Generator</p>
+    <div class="words text-center">
+      <form>
+        <ul>
+          <li class="py-6">
+            <label for="gender">Select Gender</label>
+            <select id="profile-gender" name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </li>
+          <li>
+            <label for="age">Select Age</label>
+            <input type="number" name="age" id="num">
+        </ul>
+      </form>
+    </div>
+    <p class="py-6 words text-center">
+      <button id="btn" onclick="switchScreen(),subInput(),getImg(),getName1(), getName()" class="border border-blue-800 text-blue-800 pl-1 pr-1">Generate Profile</button>
+      <button id="btn" onclick="saveInput()" class="border border-blue-800 text-blue-800 pl-1 pr-1">Save Input</button>
+      <button id="btn" onclick="switchScreen(),storageOutput(),getImg(),getName1(), getName()" class="border border-blue-800 text-blue-800 pl-1 pr-1">Generate Saved Input</button>
+      <!-- Selectors for age and gender. Buttons for generating profile, saving input, and generating saved input -->
+    </p>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
